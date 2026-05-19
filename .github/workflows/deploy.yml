@@ -17,7 +17,7 @@ jobs:
 
       - name: Authenticate to Salesforce
         run: |
-          echo "${{ secrets.AEX_MS_SFDX_URL }}" | sf org login sfdx-url --stdin --alias target-org
+          echo "${{ secrets.AEX_MS_SFDX_URL }}" | sf org login sfdx-url --sfdx-url-stdin --alias target-org
 
       - name: Deploy metadata
         run: |
